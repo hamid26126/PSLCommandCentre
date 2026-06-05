@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using PSLCommandCentre.Helpers;
+using PSLCommandCentre.Repositories;
 
 namespace PSLCommandCentre.Forms
 {
@@ -16,5 +11,60 @@ namespace PSLCommandCentre.Forms
         {
             InitializeComponent();
         }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+            lblWelcome.Text = $"Welcome, {SessionManager.Username}";
+            LoadStats();
+        }
+
+        private void LoadStats()
+        {
+            try
+            {
+                lblTeamCount.Text = new TeamRepository().GetAll().Count.ToString();
+                lblPlayerCount.Text = new PlayerRepository().GetAll().Count.ToString();
+                lblVenueCount.Text = new VenueRepository().GetAll().Count.ToString();
+                lblSeasonCount.Text = new SeasonRepository().GetAll().Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                Logger.Log("DashboardForm.LoadStats", ex);
+            }
+        }
+
+        // ── Navigation buttons ──────────────────────────────
+
+        private void btnPlayers_Click(object sender, EventArgs e)
+            => OpenForm(new PlayerListForm());
+
+        private void btnTeams_Click(object sender, EventArgs e)
+            => OpenForm(new TeamListForm());
+
+        private void btnVenues_Click(object sender, EventArgs e)
+            => OpenForm(new VenueListForm());
+
+        private void btnSeasons_Click(object sender, EventArgs e)
+            => OpenForm(new SeasonListForm());
+
+        private void OpenForm(Form f)
+        {
+            f.FormClosed += (s, a) => { this.Show(); LoadStats(); };
+            this.Hide();
+            f.Show();
+        }
+
+        // ── File Menu ───────────────────────────────────────
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SessionManager.Clear();
+            var login = new LoginForm();
+            login.Show();
+            this.Close();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+            => Application.Exit();
     }
 }

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using PSLCommandCentre.Helpers;
 
 namespace PSLCommandCentre.Repositories
 {
-    internal class BaseRepository
+    public abstract class BaseRepository
     {
+        // Every repository gets a fresh connection through this
+        protected MySqlConnection GetConnection()
+        {
+            return DatabaseHelper.GetConnection();
+        }
     }
 }

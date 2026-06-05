@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PSLCommandCentre.Domain
+﻿namespace PSLCommandCentre.Domain
 {
-    internal class Team
+    public class Team
     {
+        public int TeamId { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string Owner { get; set; }
+        public int? HomeVenueId { get; set; }
+        public string HomeVenueName { get; set; } // for display only, not saved
+        public decimal Budget { get; set; }
+
+        public override string ToString() => Name;
     }
 }

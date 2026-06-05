@@ -167,12 +167,20 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\MatchRepository.cs" />
     <Compile Include="Repositories\PlayerRepository.cs" />
+    <Compile Include="Repositories\SeasonRepository.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
+    <Compile Include="Repositories\VenueRepository.cs" />
     <Compile Include="Services\AuctionService.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\MatchService.cs" />
     <Compile Include="Services\PlayerService.cs" />
     <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\SeasonService.cs" />
+    <Compile Include="Services\TeamService.cs" />
+    <Compile Include="Services\VenueService.cs" />
+    <EmbeddedResource Include="Forms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

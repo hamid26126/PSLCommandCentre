@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PSLCommandCentre.Domain;
+using System;
 
 namespace PSLCommandCentre.Helpers
 {
@@ -48,6 +49,38 @@ namespace PSLCommandCentre.Helpers
                 return ValidationResult.Fail("Player name is required.");
             if (!IsValidLength(name, 2, 100))
                 return ValidationResult.Fail("Player name must be between 2 and 100 characters.");
+            return ValidationResult.Ok();
+        }
+
+        public static ValidationResult ValidateVenue(Venue v)
+        {
+            if (IsEmpty(v.Name)) return ValidationResult.Fail("Venue name is required.");
+            if (IsEmpty(v.City)) return ValidationResult.Fail("City is required.");
+            if (v.Capacity <= 0) return ValidationResult.Fail("Capacity must be greater than 0.");
+            return ValidationResult.Ok();
+        }
+
+        public static ValidationResult ValidateSeason(Season s)
+        {
+            if (IsEmpty(s.Name)) return ValidationResult.Fail("Season name is required.");
+            if (s.Year < 2016) return ValidationResult.Fail("Year must be 2016 or later.");
+            if (s.EndDate <= s.StartDate) return ValidationResult.Fail("End date must be after start date.");
+            return ValidationResult.Ok();
+        }
+
+        public static ValidationResult ValidateTeam(Team t)
+        {
+            if (IsEmpty(t.Name)) return ValidationResult.Fail("Team name is required.");
+            if (IsEmpty(t.City)) return ValidationResult.Fail("City is required.");
+            if (t.Budget < 0) return ValidationResult.Fail("Budget cannot be negative.");
+            return ValidationResult.Ok();
+        }
+
+        public static ValidationResult ValidatePlayer(Player p)
+        {
+            if (IsEmpty(p.Name)) return ValidationResult.Fail("Player name is required.");
+            if (IsEmpty(p.Nationality)) return ValidationResult.Fail("Nationality is required.");
+            if (IsEmpty(p.Role)) return ValidationResult.Fail("Role is required.");
             return ValidationResult.Ok();
         }
     }
