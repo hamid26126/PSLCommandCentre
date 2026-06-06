@@ -133,11 +133,23 @@
     <Compile Include="Forms\MatchForm.Designer.cs">
       <DependentUpon>MatchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PlayerAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerAddEditForm.Designer.cs">
+      <DependentUpon>PlayerAddEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PlayerForm.Designer.cs">
       <DependentUpon>PlayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlayerListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerListForm.Designer.cs">
+      <DependentUpon>PlayerListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportsForm.cs">
       <SubType>Form</SubType>
@@ -151,11 +163,29 @@
     <Compile Include="Forms\ScorecardForm.Designer.cs">
       <DependentUpon>ScorecardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SeasonListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeasonListForm.Designer.cs">
+      <DependentUpon>SeasonListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TeamForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\TeamForm.Designer.cs">
       <DependentUpon>TeamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeamListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamListForm.Designer.cs">
+      <DependentUpon>TeamListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VenueListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VenueListForm.Designer.cs">
+      <DependentUpon>VenueListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Helpers\Logger.cs" />
@@ -183,6 +213,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayerAddEditForm.resx">
+      <DependentUpon>PlayerAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayerListForm.resx">
+      <DependentUpon>PlayerListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

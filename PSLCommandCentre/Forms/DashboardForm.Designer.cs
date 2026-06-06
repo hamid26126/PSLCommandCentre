@@ -34,10 +34,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTeamCount = new System.Windows.Forms.Label();
-            this.lblPlayerCount = new System.Windows.Forms.Label();
-            this.lblVenueCount = new System.Windows.Forms.Label();
             this.lblSeasonCount = new System.Windows.Forms.Label();
+            this.lblVenueCount = new System.Windows.Forms.Label();
+            this.lblPlayerCount = new System.Windows.Forms.Label();
+            this.lblTeamCount = new System.Windows.Forms.Label();
             this.btnPlayers = new System.Windows.Forms.Button();
             this.btnTeams = new System.Windows.Forms.Button();
             this.btnVenues = new System.Windows.Forms.Button();
@@ -71,12 +71,14 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // lblWelcome
             // 
@@ -99,23 +101,14 @@
             this.panel1.Size = new System.Drawing.Size(297, 100);
             this.panel1.TabIndex = 2;
             // 
-            // lblTeamCount
+            // lblSeasonCount
             // 
-            this.lblTeamCount.AutoSize = true;
-            this.lblTeamCount.Location = new System.Drawing.Point(17, 15);
-            this.lblTeamCount.Name = "lblTeamCount";
-            this.lblTeamCount.Size = new System.Drawing.Size(14, 16);
-            this.lblTeamCount.TabIndex = 0;
-            this.lblTeamCount.Text = "0";
-            // 
-            // lblPlayerCount
-            // 
-            this.lblPlayerCount.AutoSize = true;
-            this.lblPlayerCount.Location = new System.Drawing.Point(89, 15);
-            this.lblPlayerCount.Name = "lblPlayerCount";
-            this.lblPlayerCount.Size = new System.Drawing.Size(14, 16);
-            this.lblPlayerCount.TabIndex = 1;
-            this.lblPlayerCount.Text = "0";
+            this.lblSeasonCount.AutoSize = true;
+            this.lblSeasonCount.Location = new System.Drawing.Point(233, 15);
+            this.lblSeasonCount.Name = "lblSeasonCount";
+            this.lblSeasonCount.Size = new System.Drawing.Size(14, 16);
+            this.lblSeasonCount.TabIndex = 3;
+            this.lblSeasonCount.Text = "0";
             // 
             // lblVenueCount
             // 
@@ -126,14 +119,23 @@
             this.lblVenueCount.TabIndex = 2;
             this.lblVenueCount.Text = "0";
             // 
-            // lblSeasonCount
+            // lblPlayerCount
             // 
-            this.lblSeasonCount.AutoSize = true;
-            this.lblSeasonCount.Location = new System.Drawing.Point(233, 15);
-            this.lblSeasonCount.Name = "lblSeasonCount";
-            this.lblSeasonCount.Size = new System.Drawing.Size(14, 16);
-            this.lblSeasonCount.TabIndex = 3;
-            this.lblSeasonCount.Text = "0";
+            this.lblPlayerCount.AutoSize = true;
+            this.lblPlayerCount.Location = new System.Drawing.Point(89, 15);
+            this.lblPlayerCount.Name = "lblPlayerCount";
+            this.lblPlayerCount.Size = new System.Drawing.Size(14, 16);
+            this.lblPlayerCount.TabIndex = 1;
+            this.lblPlayerCount.Text = "0";
+            // 
+            // lblTeamCount
+            // 
+            this.lblTeamCount.AutoSize = true;
+            this.lblTeamCount.Location = new System.Drawing.Point(17, 15);
+            this.lblTeamCount.Name = "lblTeamCount";
+            this.lblTeamCount.Size = new System.Drawing.Size(14, 16);
+            this.lblTeamCount.TabIndex = 0;
+            this.lblTeamCount.Text = "0";
             // 
             // btnPlayers
             // 
@@ -143,6 +145,7 @@
             this.btnPlayers.TabIndex = 3;
             this.btnPlayers.Text = "🏏 Players";
             this.btnPlayers.UseVisualStyleBackColor = true;
+            this.btnPlayers.Click += new System.EventHandler(this.btnPlayers_Click_1);
             // 
             // btnTeams
             // 
@@ -152,6 +155,7 @@
             this.btnTeams.TabIndex = 4;
             this.btnTeams.Text = "👥 Teams";
             this.btnTeams.UseVisualStyleBackColor = true;
+            this.btnTeams.Click += new System.EventHandler(this.btnTeams_Click_1);
             // 
             // btnVenues
             // 

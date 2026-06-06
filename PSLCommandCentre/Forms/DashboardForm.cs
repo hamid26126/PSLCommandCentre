@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using PSLCommandCentre.Helpers;
+﻿using PSLCommandCentre.Helpers;
 using PSLCommandCentre.Repositories;
+using System;
+using System.Windows.Forms;
 
 namespace PSLCommandCentre.Forms
 {
@@ -35,16 +35,16 @@ namespace PSLCommandCentre.Forms
 
         // ── Navigation buttons ──────────────────────────────
 
-        private void btnPlayers_Click(object sender, EventArgs e)
+        private void btnPlayers_Click_1(object sender, EventArgs e)
             => OpenForm(new PlayerListForm());
 
-        private void btnTeams_Click(object sender, EventArgs e)
+        private void btnTeams_Click_1(object sender, EventArgs e)
             => OpenForm(new TeamListForm());
 
-        private void btnVenues_Click(object sender, EventArgs e)
+        private void btnVenues_Click_1(object sender, EventArgs e)
             => OpenForm(new VenueListForm());
 
-        private void btnSeasons_Click(object sender, EventArgs e)
+        private void btnSeasons_Click_1(object sender, EventArgs e)
             => OpenForm(new SeasonListForm());
 
         private void OpenForm(Form f)
@@ -56,7 +56,7 @@ namespace PSLCommandCentre.Forms
 
         // ── File Menu ───────────────────────────────────────
 
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             SessionManager.Clear();
             var login = new LoginForm();
@@ -64,7 +64,7 @@ namespace PSLCommandCentre.Forms
             this.Close();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
             => Application.Exit();
     }
 }
