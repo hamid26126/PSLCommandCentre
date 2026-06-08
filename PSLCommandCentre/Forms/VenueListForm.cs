@@ -16,5 +16,10 @@ namespace PSLCommandCentre.Forms
         {
             InitializeComponent();
         }
+
+        private void VenueListForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

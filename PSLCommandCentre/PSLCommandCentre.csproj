@@ -96,6 +96,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\AuctionDraft.cs" />
+    <Compile Include="Domain\BattingPerf.cs" />
+    <Compile Include="Domain\BowlingPerf.cs" />
     <Compile Include="Domain\Innings.cs" />
     <Compile Include="Domain\Match.cs" />
     <Compile Include="Domain\MatchResult.cs" />
@@ -127,11 +129,23 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MatchAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchAddEditForm.Designer.cs">
+      <DependentUpon>MatchAddEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MatchForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MatchForm.Designer.cs">
       <DependentUpon>MatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MatchListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchListForm.Designer.cs">
+      <DependentUpon>MatchListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PlayerAddEditForm.cs">
       <SubType>Form</SubType>
@@ -150,6 +164,12 @@
     </Compile>
     <Compile Include="Forms\PlayerListForm.Designer.cs">
       <DependentUpon>PlayerListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PointsTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PointsTableForm.Designer.cs">
+      <DependentUpon>PointsTableForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportsForm.cs">
       <SubType>Form</SubType>
@@ -194,9 +214,12 @@
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AuctionRepository.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\MatchRepository.cs" />
     <Compile Include="Repositories\PlayerRepository.cs" />
+    <Compile Include="Repositories\PointsTableRepository.cs" />
+    <Compile Include="Repositories\ScorecardRepository.cs" />
     <Compile Include="Repositories\SeasonRepository.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
     <Compile Include="Repositories\VenueRepository.cs" />
@@ -204,21 +227,41 @@
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\MatchService.cs" />
     <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Services\PointsTableService.cs" />
     <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\ScorecardService.cs" />
     <Compile Include="Services\SeasonService.cs" />
     <Compile Include="Services\TeamService.cs" />
     <Compile Include="Services\VenueService.cs" />
+    <EmbeddedResource Include="Forms\AuctionForm.resx">
+      <DependentUpon>AuctionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchAddEditForm.resx">
+      <DependentUpon>MatchAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchListForm.resx">
+      <DependentUpon>MatchListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PlayerAddEditForm.resx">
       <DependentUpon>PlayerAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PlayerListForm.resx">
       <DependentUpon>PlayerListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PointsTableForm.resx">
+      <DependentUpon>PointsTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScorecardForm.resx">
+      <DependentUpon>ScorecardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VenueListForm.resx">
+      <DependentUpon>VenueListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

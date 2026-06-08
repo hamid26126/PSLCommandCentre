@@ -83,5 +83,16 @@ namespace PSLCommandCentre.Helpers
             if (IsEmpty(p.Role)) return ValidationResult.Fail("Role is required.");
             return ValidationResult.Ok();
         }
+
+        public static ValidationResult ValidateMatch(Match m)
+        {
+            if (m.SeasonId <= 0) return ValidationResult.Fail("Please select a season.");
+            if (m.Team1Id <= 0) return ValidationResult.Fail("Please select Team 1.");
+            if (m.Team2Id <= 0) return ValidationResult.Fail("Please select Team 2.");
+            if (m.Team1Id == m.Team2Id) return ValidationResult.Fail("A team cannot play against itself.");
+            if (m.VenueId <= 0) return ValidationResult.Fail("Please select a venue.");
+            if (m.MatchDate < DateTime.Today) return ValidationResult.Fail("Match date cannot be in the past.");
+            return ValidationResult.Ok();
+        }
     }
 }
