@@ -10,7 +10,7 @@ namespace PSLCommandCentre.Helpers
             "Server=localhost;" +
             "Database=PSLCommandCentre;" +
             "Uid=root;" +
-            "Pwd=Comp_sql123;";   // ← change to your MySQL root password
+            "Pwd=HasanYasir01;";   // ← change to your MySQL root password
 
         public static MySqlConnection GetConnection()
         {
