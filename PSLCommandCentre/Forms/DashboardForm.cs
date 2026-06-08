@@ -47,6 +47,15 @@ namespace PSLCommandCentre.Forms
         private void btnSeasons_Click_1(object sender, EventArgs e)
             => OpenForm(new SeasonListForm());
 
+        private void btnMatches_Click(object sender, EventArgs e)
+            => OpenForm(new MatchListForm());
+
+        private void btnAuction_Click_1(object sender, EventArgs e)
+            => OpenForm(new AuctionForm());
+
+        private void btnPointsTable_Click_1(object sender, EventArgs e)
+            => OpenForm(new PointsTableForm());
+
         private void OpenForm(Form f)
         {
             f.FormClosed += (s, a) => { this.Show(); LoadStats(); };

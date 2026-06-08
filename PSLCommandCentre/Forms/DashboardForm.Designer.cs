@@ -42,6 +42,9 @@
             this.btnTeams = new System.Windows.Forms.Button();
             this.btnVenues = new System.Windows.Forms.Button();
             this.btnSeasons = new System.Windows.Forms.Button();
+            this.btnMatches = new System.Windows.Forms.Button();
+            this.btnPointsTable = new System.Windows.Forms.Button();
+            this.btnAuction = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,14 +72,14 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
@@ -175,11 +178,44 @@
             this.btnSeasons.Text = "📅 Seasons";
             this.btnSeasons.UseVisualStyleBackColor = true;
             // 
+            // btnMatches
+            // 
+            this.btnMatches.Location = new System.Drawing.Point(64, 297);
+            this.btnMatches.Name = "btnMatches";
+            this.btnMatches.Size = new System.Drawing.Size(75, 23);
+            this.btnMatches.TabIndex = 7;
+            this.btnMatches.Text = "Matches";
+            this.btnMatches.UseVisualStyleBackColor = true;
+            this.btnMatches.Click += new System.EventHandler(this.btnMatches_Click);
+            // 
+            // btnPointsTable
+            // 
+            this.btnPointsTable.Location = new System.Drawing.Point(366, 297);
+            this.btnPointsTable.Name = "btnPointsTable";
+            this.btnPointsTable.Size = new System.Drawing.Size(103, 23);
+            this.btnPointsTable.TabIndex = 8;
+            this.btnPointsTable.Text = "Points Table";
+            this.btnPointsTable.UseVisualStyleBackColor = true;
+            this.btnPointsTable.Click += new System.EventHandler(this.btnPointsTable_Click_1);
+            // 
+            // btnAuction
+            // 
+            this.btnAuction.Location = new System.Drawing.Point(207, 297);
+            this.btnAuction.Name = "btnAuction";
+            this.btnAuction.Size = new System.Drawing.Size(75, 23);
+            this.btnAuction.TabIndex = 9;
+            this.btnAuction.Text = "Auction";
+            this.btnAuction.UseVisualStyleBackColor = true;
+            this.btnAuction.Click += new System.EventHandler(this.btnAuction_Click_1);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAuction);
+            this.Controls.Add(this.btnPointsTable);
+            this.Controls.Add(this.btnMatches);
             this.Controls.Add(this.btnSeasons);
             this.Controls.Add(this.btnVenues);
             this.Controls.Add(this.btnTeams);
@@ -216,5 +252,8 @@
         private System.Windows.Forms.Button btnTeams;
         private System.Windows.Forms.Button btnVenues;
         private System.Windows.Forms.Button btnSeasons;
+        private System.Windows.Forms.Button btnMatches;
+        private System.Windows.Forms.Button btnPointsTable;
+        private System.Windows.Forms.Button btnAuction;
     }
 }
